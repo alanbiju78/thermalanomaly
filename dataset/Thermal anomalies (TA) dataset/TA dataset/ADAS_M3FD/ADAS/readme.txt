@@ -1,0 +1,1 @@
+Download the FLIR ADAS dataset and copy all train and valid images inside "thermal_16_bit"

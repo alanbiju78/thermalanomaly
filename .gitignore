@@ -1,0 +1,15 @@
+# Ignore all files inside archive but keep subfolders
+archive/*
+!archive/**/
+
+# Ignore all files inside classifier_data but keep subfolders
+classifier_data/*
+!classifier_data/**/
+
+# Ignore all files inside dataset but keep subfolders
+dataset/*
+!dataset/**/
+
+# Ignore all files inside data but keep subfolders
+data/*
+!data/**/
