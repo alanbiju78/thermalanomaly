@@ -1,6 +1,3 @@
-archive/
-classifier_data//
-dataset//
-data//
-
-
+archive/*
+classifier_data/*
+dataset/*

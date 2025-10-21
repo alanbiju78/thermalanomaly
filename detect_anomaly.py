@@ -8,7 +8,7 @@ import mimetypes
 
 
 # --- Load Model and Threshold ---
-MODEL_PATH = 'thermal_anomaly_model.h5'
+MODEL_PATH = 'thermal_anomaly_model.keras'
 THRESHOLD_PATH = 'anomaly_threshold.npy'
 
 model = load_model(MODEL_PATH)
@@ -110,8 +110,8 @@ def check_image_for_anomaly(image_path):
         _, jpeg = cv2.imencode('.jpg', overlay)
         image_bytes = jpeg.tobytes()
         # Email details
-        sender_email = 'biznexprojectmini@gmail.com'
-        receiver_email = 'blessonveenus19@gmail.com'
+        sender_email = '1@gmail.com'#ue sender email
+        receiver_email = '2@gmail.com'#use receiver email
         subject = 'You have a message'
         body = 'This is an email sent from Python with an image attached.'
 
@@ -137,7 +137,7 @@ def check_image_for_anomaly(image_path):
 
         # Send the email
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(sender_email, 'egqe pdjh gwpi cnhd')  # Use Gmail App Password here
+            smtp.login(sender_email, '')  # Use Gmail App Password here
             smtp.send_message(msg)
 
     else:
@@ -145,12 +145,11 @@ def check_image_for_anomaly(image_path):
         
 
 # --- To run the demo ---
+# --- To run the demo ---
 if __name__ == '__main__':
-    TEST_IMAGE_NORMAL = 'data/test/normal_image.bmp'
-    TEST_IMAGE_ANOMALY = 'data/test/anomalous_image.bmp'
     
-    print("--- Checking a NORMAL image ---")
-    check_image_for_anomaly(TEST_IMAGE_NORMAL)
+    # 💡 PUT THE PATH TO YOUR SINGLE TEST IMAGE HERE
+    IMAGE_TO_TEST = 'data/test/anomalous_image.bmp' 
 
-    print("\n--- Checking an ANOMALOUS image ---")
-    check_image_for_anomaly(TEST_IMAGE_ANOMALY)
+    print(f"--- Analyzing image: {IMAGE_TO_TEST} ---")
+    check_image_for_anomaly(IMAGE_TO_TEST)
