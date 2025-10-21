@@ -1,5 +1,6 @@
 archive/
-classifier_data/
-dataset/
-data/
-data/train/
+classifier_data//
+dataset//
+data//
+
+
